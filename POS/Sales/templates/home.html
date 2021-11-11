@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+    
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Product Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>         
+  {% for post in posts %}
+    <th scope="row">{{ post.product_id }}</th>
+    <td> {{ post.product_name }}</td>
+    <td>{{ post.product_des }}</td>
+    <td>{{ post.price }}</td>
+    <td>{{ post.quantity }}</td>
+    <td>
+      <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+      <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+    </td>
+    
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+  
+
+        
+    
+{% endblock content %}
