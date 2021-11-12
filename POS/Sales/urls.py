@@ -9,6 +9,7 @@ from . import views
 
 urlpatterns = [
     path('', SalesListView.as_view(), name='Sales-home'),
+    path('trans/', views.Trans, name='Sales-Trans'),
     path('product/new/', SalesCreateView.as_view(), name='add-prod'),
     path('product/<int:pk>/', SalesDetailView.as_view(), name='prod-details'),
     path('product/<int:pk>/update/', SalesUpdateView.as_view(), name='prod-update'),

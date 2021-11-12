@@ -54,7 +54,8 @@ class SalesDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return True
 
 
-
+def Trans(request):
+    return render(request, 'trans.html', {'title': 'About'})
 
 
     

@@ -37,6 +37,8 @@
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{% url 'Sales-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'Sales-about' %}">About</a>
+              <a class="nav-item nav-link" href="{% url 'Sales-Trans' %}">POS</a>
+
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
@@ -97,5 +99,12 @@
 type="text/javascript"
 src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
 ></script>
+<script>
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+  
+  myModal.addEventListener('shown.mdb.modal', () => {
+    myInput.focus()
+  })</script>
 </body>
 </html>
